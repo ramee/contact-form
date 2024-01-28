@@ -28,17 +28,19 @@ class HomeController extends AbstractController
             $form = $this->createForm(QuestionType::class, new Question());
 
             return $this->render(
-                'home/index.html.twig', [
-                  'form' => $form,
-                  'message' => 'Köszönjük szépen a kérdésedet.
+                'home/index.html.twig',
+                [
+                    'form' => $form,
+                    'message' => 'Köszönjük szépen a kérdésedet.
 Válaszunkkal hamarosan keresünk a megadott e-mail címen.',
                 ]
             );
         }
 
         return $this->render(
-            'home/index.html.twig', [
-            'form' => $form,
+            'home/index.html.twig',
+            [
+                'form' => $form,
             ]
         );
     }
